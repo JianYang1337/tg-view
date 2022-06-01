@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Index</title>
+</head>
+<body>
+    <div class="auth">
+        <div class="auth-block">
+            <div class="auth-block__header">VK Messenger</div>
+            <div class="wrong-inputs hidden">Неверно заполнены поля</div>
+            <form class="auth-block__form">
+                <div class="auth-block__input">
+                    <input class="input input-phone" type="tel" placeholder="+7 " value="+79286203639">
+                    <div class="input__title">Введите ваш номер телефона</div>
+                </div>
+                <div class="auth-block__input">
+                    <input class="input input-password" type="password" placeholder="password" value="123">
+                    <div class="input__title">Введите пароль</div>
+                </div>
+                <button type="button" class="btn btn--enter" disabled>Войти</button>
+                <button type="button" class="btn btn--forgot-password">Забыли пароль?</button>
+                <button type="button" class="btn btn--registration">Зарегистрироваться</button>
+            </form>
+        </div>
+        <div class="forgot-password">
+            <div class="forgot-password__header">Восстановление пароля</div>
+            <form class="forgot-password__form">
+                <input class="input input-phone" type="tel" placeholder="+7 ">
+                <button type="button" class="btn forgot__btn--enter">Отправить</button>
+             </form>
+        </div>
+        <div class="registration">
+            <div class="registration__header">Регистрация</div>
+            <form class="registration__form">
+                <div class="registration__last-name">
+                    <input class="input registration-lastname__input" type="text" placeholder="Login" id="login">
+                    <div class="registration-lastname__title">Введите логин</div>
+                </div>
+                <div class="registration__last-name">
+                    <input class="input registration-lastname__input" type="password" id="password">
+                    <div class="registration-lastname__title">Введите пароль</div>
+                </div>
+                <div class="registration__first-name">
+                    <input class="input registration-firstname__input" type="text" placeholder="Name" id="firstName">
+                    <div class="registration-firstname__title">Введите ваше имя</div>
+                </div>
+                <div class="registration__last-name">
+                    <input class="input registration-lastname__input" type="text" placeholder="Last name" id="lastName">
+                    <div class="registration-lastname__title">Введите вашу фамилию</div>
+                </div>
+                <div class="registration__phonenumber">
+                    <input class="input registration-phonenumber__input" type="tel" placeholder="+7 999 999 99 99">
+                    <div class="registration-phonenumber__title">Введите ваш номер телефона</div>
+                </div>
+                
+                <button type="button" class="btn btn--register">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+    <div class="new-dialog">
+        <div class="new-dialog__main">
+        <div class="new-dialog__header">
+            <div class="new-dialog__header-text">Новое сообщение</div>
+        </div>  
+        <div class="new-dialog__container">
+        <div class="new-dialog__left-side">
+            <div class="new-dialog__chat-title">
+                <input class="chat-title__image" type="file" accept="image/jpeg, image/png, image/bmp" id="img1">
+                <label for="img1">
+                    <img class="chat-title__image-icon" src="./icons/camera.svg">
+                </label>
+                <input class="chat-title__text" type="text" placeholder="Введите название беседы...">
+            </div>
+            <div class="new-dialog__search">
+                <input class="new-dialog__search-input" type="text" placeholder="Начните вводить имя и фамилию...">
+                <img class="new-dialog__search-icon" src="./icons/search.svg">
+                <img class="new-dialog__search-icon-black" src="./icons/searchBlack.svg">
+            </div>
+            <div class="new-dialog__contacts">
+                <div class="new-dialog__contacts-item">
+                </div>
+            </div>
+        </div>
+        <div class="new-dialog__right-side">
+            <div class="new-dialog__right-side-header">Участники</div>
+            <div class="new-dialog__members"></div>
+        </div>
+        </div>
+        <div class="new-dialog__footer">
+            <div class="new-dialog__footer-buttons">
+                <button class="new-dialog__footer-cancel-button" type="button">
+                    Отменить
+                </button>
+                <button class="new-dialog__footer-send-button" type="submit">
+                    Создать беседу
+                </button>
+            </div>
+        </div>
+        </div>        
+    </div>
+    <div class="left-side">
+        <header class="header">
+            <div class="search">
+                <input class="search__input" type="text" placeholder="Поиск" required> 
+                <img class="search__clear" src="./icons/clear.svg">
+                <img class="search__icon" src="./icons/search.svg">
+            </div>
+            <img class="icon icon--new-dialog" src="./icons/new_dialog.svg">
+            <div class="more__block">
+                <img class="icon icon--more" src="./icons/more.svg">
+                <div class="more__dropdown">
+                    <div class="more__important-message">Важные сообщения</div>
+                    <div class="more__setting">Настройки</div>
+                    <div class="more__about">О приложении</div>
+                    <div class="more__exit">Выход</div>
+                </div>
+            </div>
+
+        </header>
+        <div class="chats">
+            <div class="chat-link">
+                <img class="chat-link__avatar" src="./photo/photo.jpg">
+                <div class="chat-link__info">
+                    <div class="chat-link__title">Maxim Kosarev</div>
+                    <div class="chat-link__message">
+                        <span class="chat-link__sender">Вы:</span>
+                        Hello world!
+                        <img class="chat-link__message-status" src="./icons/new.svg">
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="unreaded-messages">
+            <label class="theme" style="user-select: none;" for="unreaded-messages__checkbox">Светлая тема</label>
+            <label class="unreaded-messages__checkbox">
+                <input type="checkbox" id="unreaded-messages__checkbox">
+                <span class="switch">
+                    <span class="switch__point"></span>
+                </span>
+            </label>    
+        </div>
+    </div>
+    <div class="right-side">
+        <header class="header right-side__header">
+            <div class="current-chat">
+                <div class="current-chat__title">Maxim Kosarev</div>
+                <div class="current-chat__status">online</div>
+            </div>
+            <div class="icon-block">
+            <img class="icon icon--phone" src="./icons/phone.svg">
+            <img class="icon icon--search" src="./icons/right-side-search.svg">
+            <img class="icon icon--info" src="./icons/info.svg">
+            </div>
+        </header>
+        <div class="chat"></div>
+        <form class="chat-input">
+            <img class="icon icon--add" src="./icons/add.svg">
+            <input class="chat-input__input" type="text" placeholder="Напишите Maxim...">
+            <img class="icon icon--emoji" src="./icons/emoji.svg">
+            <img class="icon icon--camera" src="./icons/camera.svg">
+            <button class="btn-send" type="submit" disabled>
+                <img class="icon icon--send" src="./icons/send.svg">
+            </button>   
+        </form>
+    </div>
+
+<script src='./js/main.js'></script>
+</body>
+</html>
